@@ -82,9 +82,11 @@ function toggleFullScreenClasses() {
 video.addEventListener('click', togglePlay);
 toggle.addEventListener('click', togglePlay);
 
+// video handlers 
 video.addEventListener('play', updatePlayIcon);
 video.addEventListener('pause', updatePlayIcon);
 video.addEventListener('timeupdate', handleProgress);
+video.addEventListener('loadeddata', function(){progressBar.style.flexBasis= "0%";})
 
 skipButtons.forEach(button => button.addEventListener('click', skip));
 
