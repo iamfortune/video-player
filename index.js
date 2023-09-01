@@ -21,8 +21,10 @@ function updatePlayIcon() {
   player.classList.toggle('paused');
   if (toggle.classList.contains('playing')) {
     toggle.setAttribute('title', 'Pause');
+    toggle.innerHTML = "&#10074;&#10074;";
   } else {
     toggle.setAttribute('title', 'Play');
+    toggle.innerHTML = "&#9658;";
   }
 }
 
