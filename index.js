@@ -10,6 +10,13 @@ const fullscreen = player.querySelector('.fullscreen');
 
 let isFullScreen = false;
 
+
+/* get the video ready*/
+function initializeVideo(){
+  progressBar.style.flexBasis= "0%";
+  video.volume = parseInt(ranges[0].value);
+}
+
 /* Build our functions */
 function togglePlay() {
   const action = video.paused ? 'play' : 'pause';
@@ -88,7 +95,7 @@ toggle.addEventListener('click', togglePlay);
 video.addEventListener('play', updatePlayIcon);
 video.addEventListener('pause', updatePlayIcon);
 video.addEventListener('timeupdate', handleProgress);
-video.addEventListener('loadeddata', function(){progressBar.style.flexBasis= "0%";})
+video.addEventListener('loadeddata', initializeVideo)
 
 skipButtons.forEach(button => button.addEventListener('click', skip));
 
