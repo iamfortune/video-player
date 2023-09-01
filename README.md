@@ -1,3 +1,3 @@
-# video-player
-a video player built using html5, CSS and JavaScript
-contributions are welcomed,also note that this is a fun project!
+# Video-player Js
+A video player built using HTML5, CSS and JavaScript
+This a fun project and contributions are welcomed.
